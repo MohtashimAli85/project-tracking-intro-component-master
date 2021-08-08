@@ -179,7 +179,7 @@ main {
   }
 
   .container {
-    padding: 1.5rem 1.5rem 2.5rem 5.5rem;
+    padding: 3.5rem 1.5rem 2.5rem 5.5rem;
   }
   .pt {
     padding-top: 3rem;
@@ -251,6 +251,11 @@ main {
   }
   .btn {
     font-size: 1rem;
+  }
+  .btn-demo {
+    padding: 1rem 2rem;
+    margin-right: 1.5rem;
+    border-radius: 5px;
   }
 }
 @media screen and (min-width: 1400px) {
