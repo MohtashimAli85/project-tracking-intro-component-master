@@ -33,17 +33,64 @@ img {
 .container {
   padding: 1.5rem;
 }
-.navbar .logo {
-  max-width: 30px;
-}
-.navbar .hamburger {
-  max-width: 35px;
-  max-height: 23px;
+.navbar img {
+  max-width: 40px;
 }
 
 .navbar,
-.newMD {
+.newMD,
+.links ul {
   display: flex;
+}
+.mobile-navbar-section {
+  background-color: #fff;
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 16px rgba(17, 17, 26, 0.1);
+  opacity: 0;
+  transition: opacity 0.7s;
+  z-index: -1;
+}
+.z-index1 {
+  z-index: 0;
+}
+.show {
+  opacity: 1;
+}
+.links {
+}
+.links ul {
+  list-style: none;
+  padding: 1rem;
+  align-items: center;
+  flex-direction: column;
+}
+ul li {
+  flex-basis: 20%;
+  text-align: center;
+}
+ul li + li {
+  margin-top: 1.1rem;
+}
+.links ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.line {
+  background-color: var(--grayishBlue);
+  border-radius: 5px;
+  margin: auto;
+  width: 70vw;
+  height: 1px;
+}
+.links .login {
+  color: var(--grayishBlue);
+  margin-bottom: 1.5rem;
 }
 .desktop-navbar {
   display: none;
@@ -57,7 +104,7 @@ img {
   overflow: hidden;
 }
 .illustration .device-illustration {
-  min-width: 530px;
+  width: calc(100% + 13.5rem);
 }
 main {
   /* margin: 20rem 0 0; */
@@ -66,7 +113,8 @@ main {
 .navbar,
 .btn-demo,
 .newMD h5,
-.desktop-navbar a {
+.desktop-navbar a,
+.mobile-navbar-section a {
   font-family: "Barlow Condensed", sans-serif;
 }
 main {
@@ -128,9 +176,11 @@ main {
   margin-right: 0.5rem;
 }
 @media screen and (min-width: 768px) {
-  .mobile-navbar {
+  .mobile-navbar,
+  .mobile-navbar-section {
     display: none;
   }
+
   .container {
     padding: 1.5rem 1.5rem 7.5rem 5.5rem;
   }
@@ -146,10 +196,14 @@ main {
     list-style: none;
     padding: 1rem;
     align-items: center;
+    flex-direction: row;
   }
   ul li {
     flex-basis: 20%;
     text-align: center;
+  }
+  ul li + li {
+    margin-top: 0rem;
   }
   .links ul li a {
     text-decoration: none;
@@ -178,7 +232,7 @@ main {
     margin: 0;
   }
   .illustration .device-illustration {
-    min-width: 850px;
+    width: calc(100% + 17.5rem);
   }
   .heading {
     font-size: 3.6rem;
